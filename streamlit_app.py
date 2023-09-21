@@ -24,7 +24,7 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi")
 
 
-# write your own comment -what does the next line do? 
+# normalizing the display the list of fruits
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
+# Will display as data frame (more like tabulation)
 streamlit.dataframe(fruityvice_normalized)
